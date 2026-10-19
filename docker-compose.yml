@@ -4,13 +4,19 @@ services:
     image: fk23/appletrain:v1
     ports:
       - "8000:80"
+    deploy:
+      replicas: 3
 
   bus:
     image: fk23/applebus:v1
     ports:
       - "8001:80"
+    deploy:
+      replicas: 3 
 
   loan:
     image: fk23/appleloan:v1
     ports:
-      - "8002:80"    
+      - "8002:80"
+    deploy:
+      replicas: 3  
